@@ -3,6 +3,12 @@
 <head>
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		 
+		 <meta name="language" content="en" />
+         <meta name="keywords" content="IOS, tab bar, nav bar, CSS, retina, Jquery Mobile, bartender, plugin, HTML, JQM, cross-browser" />
+         <meta name="description" content="the bartender-plugin is a CSS-only iOS-style tab bar for mobile and desktop browsers (based on the Jquery Mobile element structure)." />
+         <meta name="robots" content="index,follow">
+         <meta name="revisit-after" content="14 days">
 
          <title>Bartender - cross-browser iOS tab bar | JQM-based | CSS-only | retina &amp; regular sprite</title>
 				 
@@ -22,7 +28,7 @@
 			<h3>Cross-browser iOS tab bar</h3>
 		
 			<p>Since starting to work with Jquery Mobile I have been looking for a more "app-like" navigation bar. There are examples abound, but most can 
-			   be used on webkit-browsers only. Since I did not find a real cross-browser solution, I made one myself. I call it the <strong>Bartender</strong> plugin.<p>
+			   be used on webkit-browsers only. Since I did not find a real cross-browser solution, I made one myself. I call it the <strong>bartender</strong> plugin.<p>
 			   			   
 			<h3>Features</h3>
 			<ul>
@@ -36,13 +42,14 @@
 			
 			<p>Below you can find a walkthrough on how to setup the plugin. If you have the icon cut-outs it's pretty much copy &amp; paste.</p>
 			   		
-			<p>All files can be found on <a href="">Github</a>, including icon-background templates and minified CSS (xy KB)</p>		
+			<p>All files can be found on <a href="https://github.com/frequent/bartender/" title="bartender cross browser iOS tab bar on Github">Github</a>, including icon-background templates and minified CSS.</p>		
 			
 		<div data-role="collapsible-set" class="coll">
             <div data-role="collapsible" data-icon="one" data-collapsed="true">
 										
 			<h3>Quick Guide</h3>
-			<p>If you are using Jquery Mobile, just add a class of <span class="typewriter">apple-navbar-ui</span> to the regular navbar &lt;ul&gt; element. In the CSS change the <span class="typewriter">data-icon="names"</span> 
+			<p>If you are using Jquery Mobile, just add a class of <span class="typewriter">apple-navbar-ui</span> plus a class of <span class="typewriter">comboSprite</span> (retina-regular combined sprite) or <span class="typewriter">
+			   soloSprite</span> (separate sprites &amp; media query) to the navbar &lt;ul&gt; element. In the CSS change the <span class="typewriter">data-icon="names"</span> 
 			   and replace the sprite URL(s) with your own. That's it. If you want to use bartender on a stand-alone basis, make sure your &lt;ul&gt; has the following (JQM-rendered) element structure (you will still need some of
 			   JQM-CSS from both the containing divs):</p>
 				
@@ -52,7 +59,7 @@
   <code>
   &lt;div class="ui-footer"&gt;
    &lt;div&gt;
-    &lt;ul class="apple-navbar-ui"&gt;
+    &lt;ul class="apple-navbar-ui comboSprite"&gt;
       &lt;li&gt;
         &lt;a class="ui-btn"&gt;
           &lt;span class="ui-btn-inner"&gt;
@@ -187,11 +194,10 @@
 				<h3>Combo "retina-regular" or seperate sprites</h3>
 				
 				<p>You can put both the retina and regular CSS sprite into a single png image. This way you can serve hi-res icons to all browsers except IE7+8, which 
-				get lo-res icons from the same sprite.</p>
+				get lo-res icons from the same sprite. To do so you need to add a class of <span class="typewriter">comboSprite</span> to the navbar &lt;ul&gt; element.</p>
 				
-				<p>Alternatively you can use CSS media-queries (like JQM does) to check for retina and then serve the respective sprite. Both ways are included in the CSS and translate
-				to a single HTTP request. The sprite used on this site is (png-crushed) weighing in at 5.97KB for the combined sprite vs. 4.00KB and 2.07KB for the hi-res and lo-res versions. Bottom line 
-				is an additional 2KB file size for good looks across all current browsers.<p>
+				<p>Alternatively you can use CSS media-queries (like JQM does) to check for retina and then serve the respective sprite. Here you need to add a class of <span class="typewriter">soloSprite</span>. 
+				Both ways are included in the CSS and translate to a single HTTP request, so if you want good cross-browser looks you will have a few KB extra file size.</p>
 				
 				<p>The icon positioning is also straightforward, although it still needs some tweaking. IE7+8 ignore <span class="typewriter">background-size</span> and render correctly by default.
 				All other browsers get the artifical ratio and <span class="typewriter">background-position-x/y</span>. IE9+ is still 1px off, any clues on how to get the navbar
@@ -200,7 +206,7 @@
 				<p>The sprite is attached to <span class="typewriter">ui-btn-inner</span>. Putting it all together:</p>
 			
 				<div class="ui-footer ui-bar-a ui-footer-fixed ui-fixed-inline">
-					<div class="ui-navbar">
+					<div class="ui-navbar comboSprite">
 					<ul class="apple-navbar-ui ui-grid-d">
 						<li class="ui-block-a"><a href="#" data-icon="features" class="ui-btn"><span class="ui-btn-inner"><span class="ui-btn-text">Features</span><span class="ui-icon"></span></span></a></li>
 						<li class="ui-block-b"><a href="#" data-icon="brands" class="ui-btn"><span class="ui-btn-inner"><span class="ui-btn-text">Brands</span><span class="ui-icon"></span></span></a></li>
@@ -220,7 +226,7 @@
 				 </p>
 				 
 				<div class="ui-footer ui-bar-a ui-footer-fixed ui-fixed-inline">
-					<div class="ui-navbar">
+					<div class="ui-navbar comboSprite">
 					<ul class="apple-navbar-ui ui-grid-a">
 						<li class="ui-block-a"><a href="#" data-icon="features" class="ui-btn"><span class="ui-btn-inner"><span class="ui-btn-text">Features<span class="ui-li-count">21</span></span><span class="ui-icon"></span></span></a></li>
 						<li class="ui-block-b"><a href="#" data-icon="brands" class="ui-btn"><span class="ui-btn-inner"><span class="ui-btn-text">Brands<span class="ui-li-count">!*&%</span></span><span class="ui-icon"></span></span></a></li>
@@ -230,18 +236,17 @@
 				
 				 <p>And there it is, the bartender-plugin.<p>
 				 
-				 <p>You can grab the template and sample sprites from <a href="">Github</a>. I'm planing to add some more features to the plugin (make it scrollable to carry more buttons, look at stick-2-top/left/right, 
+				 <p>You can grab the template and sample sprites from <a href="https://github.com/frequent/bartender/" title="bartender cross browser iOS tab bar on Github">Github</a>. I'm planing to add some more features to the plugin (make it scrollable to carry more buttons, look at stick-2-top/left/right, 
 				    so make sure to fork the bartender or check back to see how things are coming along. Please post issues, suggestions and such on Github.</p>
 				 
-				 <p>And before I forget... it's a bartender, so tips are welcome of course... </p>
-				 				 				  
+				 
 			</div>			
          </div>
 	</div>
 
 	<div data-role="footer" data-id="mainFooter" data-position="fixed">
 		<div data-role="navbar" data-grid="d">
-			<ul class="apple-navbar-ui">
+			<ul class="apple-navbar-ui comboSprite">
 				<li><a href="#" data-iconpos="top" data-icon="features">Features</a></li>
 				<li><a href="#" data-iconpos="top" data-icon="brands">Brands<span class="ui-li-count">10</span></a></li>
 				<li><a href="#" data-iconpos="top" data-icon="fees">Fees</a></li>
@@ -258,5 +263,18 @@
 </body>
 		 <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 		 <script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+		 
+		 <script type="text/javascript">
+
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-19087935-2']);
+				_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
 		 
 </html>
