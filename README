@@ -1,0 +1,22 @@
+bartender CSS plugin
+
+demo at: http://www.stokkers.mobi/valuables/bartender.html
+
+This is a CSS-only plugin to generate a cross-browser iOS style tab bar. 
+
+Features:
+
+	- based on JQM elements
+	- tested in IE7+, latest FF, Opera, Chrome, Safari, Android, iOS
+	- retina icons on all browsers (except IE7-8
+	- single retina-regular sprite or separate sprites
+	- all CSS gradients
+	
+To use:
+
+	- if you are using JQM, just add the class "apple-navbar-ui" to your navbar <ul> element, change the data-icons and add your sprite URL path(s).
+	- copy the CSS behind the JQM CSS and you are good to go
+
+A detailed walkthrough explaining all the steps can be found on the demo page. 
+
+If you have any issues, suggestions or improvements, just let me know.
