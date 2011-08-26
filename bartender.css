@@ -1,0 +1,228 @@
+*                                        		{font-family: 'Droid Sans', 'Myriad Pro', Helvetica, 'Garamont Premr Pro', Arial, sans-serif; font-size: 1em;}
+html 							{-webkit-font-smoothing: antialiased;}
+pre 								{ white-space: pre-wrap; word-wrap: break-word; line-height: 0.95em; text-shadow: none; background-color: #d3d3d3; }
+.content						{ font-size: 0.85em; text-align: justify;}
+.content h3						{ font-weight: bold;}
+.typewriter						{ font-size: 0.85em; background-color: #D3D3D3; font-family: Courier New !important; padding: 0 0.5em; text-shadow: none;}
+code								{ font-family: Courier New !important; font-size: 0.85em;}
+.spacer							{ margin-bottom: 2em;}
+.coll .ui-collapsible-contain .ui-btn-text
+								{ font-size: 0.9em; font-weight: normal;}								
+.coll .ui-collapsible-contain .apple-navbar-ui a
+								{ font-size: 0.8em;}
+.spriteContainer				{ height: 150px; position: relative;}							
+.sprite							{ position: relative; z-index: 11;}						
+.spriteBack						{ background-color: #44D5FE; display: block; height: 132px; left: 25px; position: relative; top: -125px; width: 300px; z-index: 10;}
+.spriteText						{ line-height: 75px;}
+.hi-res							{ width: 30px; height: 30px; background: url("examples/sprite_hi-res.png") no-repeat; margin-left: 70px;
+								        background-size: 150px 44px; 
+									 -o-background-size: 150px 44px;
+								-webkit-background-size: 150px 44px;
+								   -moz-background-size: 150px 44px;
+									-ms-background-size: 150px 44px;
+								  }								  
+.lo-res							{ width: 30px; height: 30px; background: url("examples/sprite_lo-res.png") no-repeat; margin: -30px 0 0 20px;}
+
+								
+
+
+
+
+/* Bartender CSS-plugin, Version: 1.0 
+ * Last updated: 8/24/2011
+ * Copyright (c) 2011 Sven Franck, http://www.franckreich.de/
+ */
+
+/*  1. OVERRIDE SOME JQM CSS */
+.ui-footer													{ background: #000000;}
+.apple-navbar-ui li 											{ cursor: pointer; height: 44px; margin: 0 auto; width: 20%; text-align: center; vertical-align: middle; text-shadow: none !important; border: 0 none; padding-top:2px; position: relative; }
+.apple-navbar-ui a											{ background: none; padding: 0px; display: inline-block !important; position: static; border-left-width: 0;}
+.apple-navbar-ui .ui-icon-shadow 							{ -webkit-box-shadow: none; -moz-box-shadow: none;  box-shadow: none; }
+.apple-navbar-ui .ui-btn-inner 								{ position: relative; border: none; overflow: visible; padding: 0px !important; text-align: center;}
+
+/*  2. BUTTON BACKGROUND .ui-icon  
+ *  IE7+8 */
+.apple-navbar-ui .ui-icon									{ position: absolute; background-color: transparent; background-image: none; height: 22px; margin: 0 0 22px; left: 0; top: 0 !important; width: 100%; overflow: visible !important; z-index: -1;
+															  -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+															  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#40ffffff,EndColorStr=#12ffffff);zoom: 1; 															  
+															  }															  														 
+/*  all other  */															  
+.apple-navbar-ui  .ui-icon::before							{ width: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ""; display: block; height: 44px; z-index: 0;
+															  background-color: transparent; padding: 0.1em 0;        							
+															  background-image:         -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(0.5, rgba(255,255,255,.10)), color-stop(0.505, rgba(255,255,255,.0)), to(rgba(255,255,255,.0)));
+															  background-image:  -webkit-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.0) 50.5%, rgba(255,255,255,.0) 100%); 
+															  background-image:	     -ms-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.0) 50.5%, rgba(255,255,255,.0) 100%); 
+															  background-image: 	-moz-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.0) 50.5%, rgba(255,255,255,.0) 100%); 
+															  background-image:       -o-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.0) 50.5%, rgba(255,255,255,.0) 100%); 																					  
+															  background-image:          linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.0) 50.5%, rgba(255,255,255,.0) 100%); 															  
+															}
+/*  3. ICON BACKGROUND .ui-btn */
+/*  IDLE = gray gradient */
+.apple-navbar-ui li .ui-btn 									{ background: none; display: inline-block; width: 30px; height: 30px;															   
+															  background-image:        		      -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#333));
+															  background-image: 		   -webkit-linear-gradient(bottom, #ccc, #333);
+															  background-image:         		   linear-gradient(bottom, #ccc, #333);
+															  background-image:	   			  -moz-linear-gradient(bottom, #ccc, #333);
+															  background-image:      		    -o-linear-gradient(bottom, #ccc, #333);
+															  background-image:	    		   -ms-linear-gradient(bottom, #ccc, #333);
+																filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#cccccc');
+																}																
+/*  HOVER, ACTIVE - blue gradient */																
+.apple-navbar-ui li:hover .ui-btn 								{ background-color: #fff;															
+															  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#44D5FE');
+															  background-image: 	-webkit-linear-gradient(center top, rgba(68,213,254,.0) 0%, rgba(68,213,254,.0) 23%, #44D5FE 100%), 
+																					-webkit-radial-gradient(100% 320%, circle farthest-corner, #317BDC 65%, #317BDC 78%, rgba(49,123,220,.0) 80%), 
+																					-webkit-radial-gradient(40% 190%, circle farthest-corner, #7DAAE7 30%, #E6EEFA 90%)/*, url("fallback_active.png")*/;
+															  background-image: 	       -webkit-gradient(linear, left top, left bottom, from( rgba(068,213,254,.0)), color-stop(.43, rgba(068,213,254,.0)), to( rgba(068,213,254,1))),
+																						   -webkit-gradient(radial, 60 162, 150, 60 162, 149, from(rgba(049,123,220,.0)), to( rgba(049,123,220,1))),
+																						   -webkit-gradient(radial, 20 -43, 60, 20 -43, 40, from(rgba(125,170,231,1)), to( rgba( 230,238,250,1)))/*, url("fallback_active.png")*/;
+															  background-image: 	        linear-gradient(center top, rgba(68,213,254,.0) 0%, rgba(68,213,254,.0) 23%, #44D5FE 100%), 
+																							radial-gradient(100% 320%, circle farthest-corner, #317BDC 65%, #317BDC 78%, rgba(49,123,220,.0) 80%), 
+																							radial-gradient(40% 190%, circle farthest-corner, #7DAAE7 30%, #E6EEFA 90%)/*, url("fallback_active.png")*/;
+															  background-image: 	   -moz-linear-gradient(center top, rgba(68,213,254,.0) 0%, rgba(68,213,254,.0) 23%, #44D5FE 100%), 
+																					   -moz-radial-gradient(100% 320%, circle farthest-corner, #317BDC 65%, #317BDC 78%, rgba(49,123,220,.0) 80%), 
+																					   -moz-radial-gradient(40% 190%, circle farthest-corner, #7DAAE7 30%, #E6EEFA 90%)/*, url("fallback_active.png")*/;																					 																
+															  background-image: 	    -ms-linear-gradient(center top, rgba(68,213,254,.0) 0%, rgba(68,213,254,.0) 23%, #44D5FE 100%), 
+																						-ms-radial-gradient(100% 320%, circle farthest-corner, #317BDC 65%, #317BDC 78%, rgba(49,123,220,.0) 80%), 
+																						-ms-radial-gradient(40% 190%, circle farthest-corner, #7DAAE7 30%, #E6EEFA 90%)/*, url("fallback_active.png")*/;														  
+															  background-image: 	     -o-linear-gradient(top, rgba(68,213,254,.0) 0%, rgba(68,213,254,.37) 23%, #44D5FE 100%)/*, 
+															  not supported *//*      -o-radial-gradient(100% 320%, circle farthest-corner, #317BDC 65%, #317BDC 78%, rgba(49,123,220,.0) 80%), 
+																				         -o-radial-gradient(40% 190%, circle farthest-corner, #7DAAE7 30%, #E6EEFA 90%)*//*, url("fallback_active.png")*/;																																									
+															  }																													
+/*  4. TEXT .ui-btn-text  
+ * IMPROVE: vertical-align does not work, as ui-btn-inner needs display:block. Line-height is used to move text down - find a better way  
+ */
+.apple-navbar-ui li a .ui-btn-text 							{ color: #999999; font-weight: bold; letter-spacing: 1px; display: block; font-size: 0.8em; height: 44px; left: 0; line-height: 77px; position: absolute; text-decoration: none !important; top: -1px; width: 100%;}
+.apple-navbar-ui li:hover .ui-btn-text 						{ color: #fff; }
+
+
+/*	5. HIGHLIGHT.ui-btn-text
+ *  all browsers */												
+.apple-navbar-ui li:hover .ui-btn-text						{ border-radius: .25em; background-color: transparent; background-color: rgba(255,255,255,0.14); 
+															  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#23FFFFFF,endColorstr=#23FFFFFF);zoom: 1; /* IE6–IE9 */
+															  }													  
+/* IE9 dummy-HACK */
+.apple-navbar-ui li:hover a:not([dummy]) .ui-btn-text 			{ filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');}
+															  
+															  
+															 										
+/*   6. ICON SPRITE .ui-btn-inner  
+ * IMPROVE: check to see if these are necessary 
+ */  
+.apple-navbar-ui li a[data-icon="features"] .ui-btn-inner 		{ /* IE7 */ background-position-x:    0px; /* IE8+ */ -ms-background-position-x:    0px; }
+.apple-navbar-ui li a[data-icon="brands"] .ui-btn-inner 		{ /* IE7 */ background-position-x:  -60px; /* IE8+ */ -ms-background-position-x:  -60px; }
+.apple-navbar-ui li a[data-icon="fees"] .ui-btn-inner 			{ /* IE7 */ background-position-x:  -30px; /* IE8+ */ -ms-background-position-x:  -30px; }
+.apple-navbar-ui li a[data-icon="contact"] .ui-btn-inner 		{ /* IE7 */ background-position-x:  -90px; /* IE8+ */ -ms-background-position-x:  -90px; }
+.apple-navbar-ui li a[data-icon="about"] .ui-btn-inner			{ /* IE7 */ background-position-x: -120px; /* IE8+ */ -ms-background-position-x: -120px; }
+.apple-navbar-ui li a 	.ui-btn-inner							{ /* IE7 */ background-position-y:    0px; /* IE8+ */ -ms-background-position-y:    0px /* !important*/; }
+ 
+ 
+/* ================ SINGLE CSS-SPRITE ====================== */
+/*
+ *   7a. SINGLE
+ * 
+ *   ISSUE: icons on IE9+ are "off" by 1px. Somehow both backgrounds on ui-icon get rendered and the ::before background is being cut off at 22px
+ *          could be because IE-filter causes overflow:hidden. 
+ *			workaround (a) Try to show normal icons on IE9+ = change -ms-background-position-y to 0px !important AND set background-size to 0 0 or 300px 132px for IE9+ only
+ *			workaround (b) Solve overflow:hidden problem (if that is the cause)
+ */
+
+.apple-navbar-ui li a 	.ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_combined.png") no-repeat; 
+																	  background-size: 150px 66px; 
+																   -o-background-size: 150px 66px;
+															  -webkit-background-size: 150px 66px;
+															     -moz-background-size: 150px 66px;
+																  -ms-background-size: 150px 66px;
+																}													
+
+.apple-navbar-ui li a[data-icon="features"] span:only-child  	{ background-position:    0px -22px }
+.apple-navbar-ui li a[data-icon="brands"] span:only-child		{ background-position:  -60px -22px }
+.apple-navbar-ui li a[data-icon="fees"] span:only-child   		{ background-position:  -30px -22px }
+.apple-navbar-ui li a[data-icon="contact"] span:only-child		{ background-position:  -90px -22px }
+.apple-navbar-ui li a[data-icon="about"] span:only-child		{ background-position: -120px -22px }	
+
+/* ================ END SINGLE =============================== */
+
+
+/* ============= SEPERATE CSS-SPRITES  ======================= */
+
+/*   7b. SEPERATE */
+
+/*   REGULAR  */
+
+/*
+.apple-navbar-ui li a .ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_lo-res.png") no-repeat; 
+																      background-size: 300px 44px; 
+																   -o-background-size: 300px 44px;
+															  -webkit-background-size: 300px 44px;
+															     -moz-background-size: 300px 44px;
+																  -ms-background-size: 300px 44px;	
+																  }
+																  
+.apple-navbar-ui li a[data-icon="features"] span:only-child  	{ background-position:    0px 0px }
+.apple-navbar-ui li a[data-icon="brands"] span:only-child		{ background-position:  -60px 0px }
+.apple-navbar-ui li a[data-icon="fees"] span:only-child   		{ background-position:  -30px 0px }
+.apple-navbar-ui li a[data-icon="contact"] span:only-child		{ background-position:  -90px 0px }
+.apple-navbar-ui li a[data-icon="about"] span:only-child		{ background-position: -120px 0px }	
+
+
+.apple-navbar-ui .ui-icon::before							{ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#40ffffff,EndColorStr=#12ffffff);zoom: 1; 				 
+															  background-image:         -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), to(rgba(255,255,255,.0)));
+															  background-image:  -webkit-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 
+															  background-image:	     -ms-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 
+															  background-image: 	-moz-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 
+															  background-image:       -o-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 																					  
+															  background-image:          linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 	
+															  }
+ */	
+ 
+ /* RETINA */
+
+ /*
+ @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi) {
+	
+	  .apple-navbar-ui li a .ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_hi-res.png") no-repeat; 
+																		   background-size: 150px 66px; 
+																		-o-background-size: 150px 66px;
+																   -webkit-background-size: 150px 66px;
+																	  -moz-background-size: 150px 66px;
+																	   -ms-background-size: 150px 66px;		
+																	  }																 
+																
+	.apple-navbar-ui li a[data-icon="features"] span:only-child  	{ background-position:    0px -22px }
+	.apple-navbar-ui li a[data-icon="brands"] span:only-child   	{ background-position:  -60px -22px }
+	.apple-navbar-ui li a[data-icon="fees"] span:only-child     	{ background-position:  -30px -22px }
+	.apple-navbar-ui li a[data-icon="contact"] span:only-child   	{ background-position:  -90px -22px }
+	.apple-navbar-ui li a[data-icon="about"] span:only-child    	{ background-position: -120px -22px }	  
+	}
+*/
+/* ============= END SEPARATE ========================== */
+
+											
+/*   8. Notification Icons .ui-li-count */ 
+.apple-navbar-ui li a .ui-li-count								{ color: #ffffff; right: 0.5em; font-size: 90%; text-shadow: none; font-weight: bold; font-family: arial; 
+															  -moz-box-shadow: 0 1px 2px #999; -webkit-box-shadow: 0 1px 2px #999; box-shadow: 0 1px 2px #999; padding-bottom: 1px;
+															  border: 0.15em solid #ffffff; border-radius: 14px; -moz-border-radius: 14px; -webkit-border-radius: 14px; background-color: #72b0d4; 
+															  line-height: 16px; display: inline-block; background-position: 0 0 !important; margin-right: 38%; margin-top: -18px;
+															  
+															  background-image:        		      -webkit-gradient(linear,left top,left bottom, color-stop(0,#72b0d4),color-stop(1,#4b88b6)); 
+															  background-image: 		   -webkit-linear-gradient(top, #72b0d4, #4b88b6);
+															  background-image:         		   linear-gradient(top, #72b0d4, #4b88b6);
+															  background-image:	   			  -moz-linear-gradient(top, #72b0d4, #4b88b6);
+															  background-image:      		    -o-linear-gradient(top, #72b0d4, #4b88b6);
+															  background-image:	    		   -ms-linear-gradient(top, #72b0d4, #4b88b6);
+																filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#72b0d4', EndColorStr='#4b88b6');
+															-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#72b0d4', EndColorStr='#4b88b6')";
+															  }
+														
+														
+														
+
+
+
+								
+					
+
+
