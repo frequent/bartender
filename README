@@ -14,7 +14,9 @@ Features:
 	
 To use:
 
-	- if you are using JQM, just add the class "apple-navbar-ui" to your navbar <ul> element, change the data-icons and add your sprite URL path(s).
+	- if you are using JQM, just add the class "apple-navbar-ui" to your navbar <ul> element, 
+	- add a class of "comboSprite" (single retina-regular sprite) or "soloSprite" (separate sprites) to the <ul> element, 
+	- change the data-icons and add your sprite URL path(s),
 	- copy the CSS behind the JQM CSS and you are good to go
 
 A detailed walkthrough explaining all the steps can be found on the demo page. 
