@@ -23,6 +23,14 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 								  }								  
 .lo-res							{ width: 30px; height: 30px; background: url("examples/sprite_lo-res.png") no-repeat; margin: -30px 0 0 20px;}
 
+/* fix for JQM issue 2270, IE navbar breaking (will hopefully be worked into JQM */
+/* grid a: 50/50 */
+.ui-grid-a .ui-block-a, .ui-grid-a .ui-block-b { width: 49.9%; }
+.ui-grid-a .ui-block-a { clear: left; }
+/* grid d: 20/20/20/20/20 */
+.ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 19.9%; }
+.ui-grid-d .ui-block-a { clear: left; }
+
 								
 
 
@@ -32,13 +40,23 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
  * Last updated: 8/24/2011
  * Copyright (c) 2011 Sven Franck, http://www.franckreich.de/
  */
-
+ 
 /*  1. OVERRIDE SOME JQM CSS */
 .ui-footer													{ background: #000000;}
+.apple-navbar-ui a:link, .apple-navbar-ui a:visited, .apple-navbar-ui a:hover, .apple-navbar-ui a:active
+															{ text-decoration:  none;}
 .apple-navbar-ui li 											{ cursor: pointer; height: 44px; margin: 0 auto; width: 20%; text-align: center; vertical-align: middle; text-shadow: none !important; border: 0 none; padding-top:2px; position: relative; }
 .apple-navbar-ui a											{ background: none; padding: 0px; display: inline-block !important; position: static; border-left-width: 0;}
 .apple-navbar-ui .ui-icon-shadow 							{ -webkit-box-shadow: none; -moz-box-shadow: none;  box-shadow: none; }
 .apple-navbar-ui .ui-btn-inner 								{ position: relative; border: none; overflow: visible; padding: 0px !important; text-align: center;}
+
+/* fix for JQM issue 2270, IE navbar breaking (will hopefully be worked into JQM */
+/* grid a: 50/50 */
+.ui-grid-a .ui-block-a, .ui-grid-a .ui-block-b { width: 49.9%; }
+.ui-grid-a .ui-block-a { clear: left; }
+/* grid d: 20/20/20/20/20 */
+.ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 19.9%; }
+.ui-grid-d .ui-block-a { clear: left; }
 
 /*  2. BUTTON BACKGROUND .ui-icon  
  *  IE7+8 */
@@ -127,7 +145,7 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
  *			workaround (b) Solve overflow:hidden problem (if that is the cause)
  */
 
-.apple-navbar-ui li a 	.ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_combined.png") no-repeat; 
+.comboSprite li a 	.ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_combined.png") no-repeat; 
 																	  background-size: 150px 66px; 
 																   -o-background-size: 150px 66px;
 															  -webkit-background-size: 150px 66px;
@@ -135,11 +153,11 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 																  -ms-background-size: 150px 66px;
 																}													
 
-.apple-navbar-ui li a[data-icon="features"] span:only-child  	{ background-position:    0px -22px }
-.apple-navbar-ui li a[data-icon="brands"] span:only-child		{ background-position:  -60px -22px }
-.apple-navbar-ui li a[data-icon="fees"] span:only-child   		{ background-position:  -30px -22px }
-.apple-navbar-ui li a[data-icon="contact"] span:only-child		{ background-position:  -90px -22px }
-.apple-navbar-ui li a[data-icon="about"] span:only-child		{ background-position: -120px -22px }	
+.comboSprite li a[data-icon="features"] span:only-child  	{ background-position:    0px -22px }
+.comboSprite li a[data-icon="brands"] span:only-child		{ background-position:  -60px -22px }
+.comboSprite li a[data-icon="fees"] span:only-child   		{ background-position:  -30px -22px }
+.comboSprite li a[data-icon="contact"] span:only-child		{ background-position:  -90px -22px }
+.comboSprite li a[data-icon="about"] span:only-child		{ background-position: -120px -22px }	
 
 /* ================ END SINGLE =============================== */
 
@@ -150,8 +168,8 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 
 /*   REGULAR  */
 
-/*
-.apple-navbar-ui li a .ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_lo-res.png") no-repeat; 
+
+.soloSprite li a .ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_lo-res.png") no-repeat; 
 																      background-size: 300px 44px; 
 																   -o-background-size: 300px 44px;
 															  -webkit-background-size: 300px 44px;
@@ -159,14 +177,14 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 																  -ms-background-size: 300px 44px;	
 																  }
 																  
-.apple-navbar-ui li a[data-icon="features"] span:only-child  	{ background-position:    0px 0px }
-.apple-navbar-ui li a[data-icon="brands"] span:only-child		{ background-position:  -60px 0px }
-.apple-navbar-ui li a[data-icon="fees"] span:only-child   		{ background-position:  -30px 0px }
-.apple-navbar-ui li a[data-icon="contact"] span:only-child		{ background-position:  -90px 0px }
-.apple-navbar-ui li a[data-icon="about"] span:only-child		{ background-position: -120px 0px }	
+.soloSprite li a[data-icon="features"] span:only-child  	{ background-position:    0px 0px }
+.soloSprite li a[data-icon="brands"] span:only-child		{ background-position:  -60px 0px }
+.soloSprite li a[data-icon="fees"] span:only-child   		{ background-position:  -30px 0px }
+.soloSprite li a[data-icon="contact"] span:only-child		{ background-position:  -90px 0px }
+.soloSprite li a[data-icon="about"] span:only-child		{ background-position: -120px 0px }	
 
 
-.apple-navbar-ui .ui-icon::before							{ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#40ffffff,EndColorStr=#12ffffff);zoom: 1; 				 
+.soloSprite .ui-icon::before							{ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#40ffffff,EndColorStr=#12ffffff);zoom: 1; 				 
 															  background-image:         -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), to(rgba(255,255,255,.0)));
 															  background-image:  -webkit-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 
 															  background-image:	     -ms-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 
@@ -174,16 +192,16 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 															  background-image:       -o-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 																					  
 															  background-image:          linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(255,255,255,.07) 48%, rgba(255,255,255,.0) 48.5%, rgba(255,255,255,.0) 100% ); 	
 															  }
- */	
+
  
  /* RETINA */
 
- /*
+
  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 240dpi) {
 	
-	  .apple-navbar-ui li a .ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_hi-res.png") no-repeat; 
+	  .soloSprite li a .ui-btn-inner							{ display: inline-block; position: static; height: 30px; width: 30px; background-color: none; background: url("sprite_hi-res.png") no-repeat; 
 																		   background-size: 150px 66px; 
 																		-o-background-size: 150px 66px;
 																   -webkit-background-size: 150px 66px;
@@ -191,13 +209,13 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 																	   -ms-background-size: 150px 66px;		
 																	  }																 
 																
-	.apple-navbar-ui li a[data-icon="features"] span:only-child  	{ background-position:    0px -22px }
-	.apple-navbar-ui li a[data-icon="brands"] span:only-child   	{ background-position:  -60px -22px }
-	.apple-navbar-ui li a[data-icon="fees"] span:only-child     	{ background-position:  -30px -22px }
-	.apple-navbar-ui li a[data-icon="contact"] span:only-child   	{ background-position:  -90px -22px }
-	.apple-navbar-ui li a[data-icon="about"] span:only-child    	{ background-position: -120px -22px }	  
+	.soloSprite li a[data-icon="features"] span:only-child  	{ background-position:    0px -22px }
+	.soloSprite li a[data-icon="brands"] span:only-child   		{ background-position:  -60px -22px }
+	.soloSprite li a[data-icon="fees"] span:only-child     		{ background-position:  -30px -22px }
+	.soloSprite li a[data-icon="contact"] span:only-child   	{ background-position:  -90px -22px }
+	.soloSprite li a[data-icon="about"] span:only-child    		{ background-position: -120px -22px }	  
 	}
-*/
+
 /* ============= END SEPARATE ========================== */
 
 											
@@ -216,13 +234,3 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 																filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#72b0d4', EndColorStr='#4b88b6');
 															-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#72b0d4', EndColorStr='#4b88b6')";
 															  }
-														
-														
-														
-
-
-
-								
-					
-
-
