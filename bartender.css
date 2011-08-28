@@ -87,7 +87,8 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 																filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#cccccc');
 																}																
 /*  HOVER, ACTIVE - blue gradient */																
-.apple-navbar-ui li:hover .ui-btn 								{ background-color: #fff;															
+.apple-navbar-ui li:hover .ui-btn, .apple-navbar-ui li .ui-btn-active							
+															{ background-color: #fff;															
 															  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#44D5FE');
 															  background-image: 	-webkit-linear-gradient(center top, rgba(68,213,254,.0) 0%, rgba(68,213,254,.0) 23%, #44D5FE 100%), 
 																					-webkit-radial-gradient(100% 320%, circle farthest-corner, #317BDC 65%, #317BDC 78%, rgba(49,123,220,.0) 80%), 
@@ -112,16 +113,19 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
  * IMPROVE: vertical-align does not work, as ui-btn-inner needs display:block. Line-height is used to move text down - find a better way  
  */
 .apple-navbar-ui li a .ui-btn-text 							{ color: #999999; font-weight: bold; letter-spacing: 1px; display: block; font-size: 0.8em; height: 44px; left: 0; line-height: 77px; position: absolute; text-decoration: none !important; top: -1px; width: 100%;}
-.apple-navbar-ui li:hover .ui-btn-text 						{ color: #fff; }
+.apple-navbar-ui li:hover .ui-btn-text, .apple-navbar-ui .ui-btn-active .ui-btn-text
+															{ color: #fff; }
 
 
 /*	5. HIGHLIGHT.ui-btn-text
  *  all browsers */												
-.apple-navbar-ui li:hover .ui-btn-text						{ border-radius: .25em; background-color: transparent; background-color: rgba(255,255,255,0.14); 
+.apple-navbar-ui li:hover .ui-btn-text, .apple-navbar-ui li .ui-btn-active .ui-btn-text						
+															{ border-radius: .25em; background-color: transparent; background-color: rgba(255,255,255,0.14); 
 															  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#23FFFFFF,endColorstr=#23FFFFFF);zoom: 1; /* IE6–IE9 */
 															  }													  
 /* IE9 dummy-HACK */
-.apple-navbar-ui li:hover a:not([dummy]) .ui-btn-text 			{ filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');}
+.apple-navbar-ui li:hover a:not([dummy]) .ui-btn-text, .apple-navbar-ui .ui-btn-active:not([dummy]) .ui-btn-text			
+															{ filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');}
 															  
 															  
 															 										
