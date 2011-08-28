@@ -1,6 +1,7 @@
 *                                        		{font-family: 'Droid Sans', 'Myriad Pro', Helvetica, 'Garamont Premr Pro', Arial, sans-serif; font-size: 1em;}
 html 							{-webkit-font-smoothing: antialiased;}
 pre 								{ white-space: pre-wrap; word-wrap: break-word; line-height: 0.95em; text-shadow: none; background-color: #d3d3d3; }
+div[data-role="content"]			{ background: #ffffff; }
 .content						{ font-size: 0.85em; text-align: justify;}
 .content h3						{ font-weight: bold;}
 .typewriter						{ font-size: 0.85em; background-color: #D3D3D3; font-family: Courier New !important; padding: 0 0.5em; text-shadow: none;}
