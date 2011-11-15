@@ -43,7 +43,7 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
  */
  
 /*  1. OVERRIDE SOME JQM CSS */
-.ui-footer													{ background: #000000;}
+.ui-footer													{ background: #000000; z-index:1000;}
 .apple-navbar-ui a:link, .apple-navbar-ui a:visited, .apple-navbar-ui a:hover, .apple-navbar-ui a:active
 															{ text-decoration:  none;}
 .apple-navbar-ui li 											{ cursor: pointer; height: 44px; margin: 0 auto; width: 20%; text-align: center; vertical-align: middle; text-shadow: none !important; border: 0 none; padding-top:2px; position: relative; }
@@ -112,15 +112,15 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 /*  4. TEXT .ui-btn-text  
  * IMPROVE: vertical-align does not work, as ui-btn-inner needs display:block. Line-height is used to move text down - find a better way  
  */
-.apple-navbar-ui li a .ui-btn-text 							{ color: #999999; font-weight: bold; letter-spacing: 1px; display: block; font-size: 0.8em; height: 44px; left: 0; line-height: 77px; position: absolute; text-decoration: none !important; top: -1px; width: 100%;}
+.apple-navbar-ui li a .ui-btn-text 							{ color: #999999; font-weight: bold; letter-spacing: 1px; display: block; font-size: 0.8em; height: 47px; left: 0; line-height: 77px; position: absolute; text-decoration: none !important; top: -1px; width: 100%;}
 .apple-navbar-ui li:hover .ui-btn-text, .apple-navbar-ui .ui-btn-active .ui-btn-text
 															{ color: #fff; }
 
 
 /*	5. HIGHLIGHT.ui-btn-text
- *  all browsers */												
+ *  all browsers */																							
 .apple-navbar-ui li:hover .ui-btn-text, .apple-navbar-ui li .ui-btn-active .ui-btn-text						
-															{ border-radius: .25em; background-color: transparent; background-color: rgba(255,255,255,0.14); 
+															{-moz-border-radius: .6em; -webkit-border-radius: .6em; border-radius: .6em; background-color: transparent; background-color: rgba(255,255,255,0.14); 
 															  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#23FFFFFF,endColorstr=#23FFFFFF);zoom: 1; /* IE6–IE9 */
 															  }													  
 /* IE9 dummy-HACK */
