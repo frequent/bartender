@@ -38,8 +38,8 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 
 
 /* Bartender CSS-plugin, Version: 1.0 
- * Last updated: 8/24/2011
- * Copyright (c) 2011 Sven Franck, http://www.franckreich.de/
+ * Last updated: 18.04.2012
+ * Copyright (c) 2012 Sven Franck, http://www.franckreich.de/
  */
  
 /*  1. OVERRIDE SOME JQM CSS */
@@ -61,7 +61,7 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 
 /*  2. BUTTON BACKGROUND .ui-icon  
  *  IE7+8 */
-.apple-navbar-ui .ui-icon									{ position: absolute; background-color: transparent; background-image: none; height: 22px; margin: 0 0 22px; left: 0; top: 0 !important; width: 100%; overflow: visible !important; z-index: -1;
+.apple-navbar-ui .ui-icon									{ position: absolute; background-color: transparent; background-image: none; height: 22px; margin: 0 0 22px; left: 0 !important; /* need to override JQM 1.1.*/ top: 0 !important; width: 100%; overflow: visible !important; z-index: -1;
 															  -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
 															  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#40ffffff,EndColorStr=#12ffffff);zoom: 1; 															  
 															  }															  														 
@@ -225,10 +225,10 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 
 											
 /*   8. Notification Icons .ui-li-count */ 
-.apple-navbar-ui li a .ui-li-count								{ color: #ffffff; right: 0.5em; font-size: 90%; text-shadow: none; font-weight: bold; font-family: arial; 
-															  -moz-box-shadow: 0 1px 2px #999; -webkit-box-shadow: 0 1px 2px #999; box-shadow: 0 1px 2px #999; padding-bottom: 1px;
+.apple-navbar-ui li a .ui-li-count								{ color: #ffffff; /* right: 0.5em; JQM 1.1 removed */ font-size: 90%; text-shadow: none; font-weight: bold; font-family: arial; 
+															  -moz-box-shadow: 0 1px 2px #999; -webkit-box-shadow: 0 1px 2px #999; box-shadow: 0 1px 2px #999; /* padding-bottom: 1px; JQM 1.1 removed */ padding: 0 2px 1px 3px;
 															  border: 0.15em solid #ffffff; border-radius: 14px; -moz-border-radius: 14px; -webkit-border-radius: 14px; background-color: #72b0d4; 
-															  line-height: 16px; display: inline-block; background-position: 0 0 !important; margin-right: 38%; margin-top: -18px;
+															  line-height: 16px; display: inline-block; background-position: 0 0 !important; margin-right: 38%; margin-top: 3px; /* - JQM 1.1 changed */ position: absolute; /* JQM 1.1 added */
 															  
 															  background-image:        		      -webkit-gradient(linear,left top,left bottom, color-stop(0,#72b0d4),color-stop(1,#4b88b6)); 
 															  background-image: 		   -webkit-linear-gradient(top, #72b0d4, #4b88b6);
