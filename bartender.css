@@ -24,19 +24,6 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 								  }								  
 .lo-res							{ width: 30px; height: 30px; background: url("examples/sprite_lo-res.png") no-repeat; margin: -30px 0 0 20px;}
 
-/* fix for JQM issue 2270, IE navbar breaking (will hopefully be worked into JQM */
-/* grid a: 50/50 */
-.ui-grid-a .ui-block-a, .ui-grid-a .ui-block-b { width: 49.9%; }
-.ui-grid-a .ui-block-a { clear: left; }
-/* grid d: 20/20/20/20/20 */
-.ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 19.9%; }
-.ui-grid-d .ui-block-a { clear: left; }
-
-								
-
-
-
-
 /* Bartender CSS-plugin, Version: 1.0 
  * Last updated: 18.04.2012
  * Copyright (c) 2012 Sven Franck, http://www.franckreich.de/
@@ -44,20 +31,14 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
  
 /*  1. OVERRIDE SOME JQM CSS */
 .ui-footer													{ background: #000000; z-index:1000;}
+.ui-footer .ui-navbar										{ margin: 0; }
+.ui-btn-icon-top .ui-btn-inner .ui-icon, .ui-btn-icon-bottom .ui-btn-inner .ui-icon { margin-left: 0px;}
 .apple-navbar-ui a:link, .apple-navbar-ui a:visited, .apple-navbar-ui a:hover, .apple-navbar-ui a:active
 															{ text-decoration:  none;}
 .apple-navbar-ui li 											{ cursor: pointer; height: 44px; margin: 0 auto; width: 20%; text-align: center; vertical-align: middle; text-shadow: none !important; border: 0 none; padding-top:2px; position: relative; }
 .apple-navbar-ui a											{ background: none; padding: 0px; display: inline-block !important; position: static; border-left-width: 0;}
 .apple-navbar-ui .ui-icon-shadow 							{ -webkit-box-shadow: none; -moz-box-shadow: none;  box-shadow: none; }
 .apple-navbar-ui .ui-btn-inner 								{ position: relative; border: none; overflow: visible; padding: 0px !important; text-align: center;}
-
-/* fix for JQM issue 2270, IE navbar breaking (will hopefully be worked into JQM */
-/* grid a: 50/50 */
-.ui-grid-a .ui-block-a, .ui-grid-a .ui-block-b { width: 49.9%; }
-.ui-grid-a .ui-block-a { clear: left; }
-/* grid d: 20/20/20/20/20 */
-.ui-grid-d .ui-block-a, .ui-grid-d .ui-block-b, .ui-grid-d .ui-block-c, .ui-grid-d .ui-block-d, .ui-grid-d .ui-block-e { width: 19.9%; }
-.ui-grid-d .ui-block-a { clear: left; }
 
 /*  2. BUTTON BACKGROUND .ui-icon  
  *  IE7+8 */
