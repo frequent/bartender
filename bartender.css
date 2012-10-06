@@ -93,7 +93,7 @@ code								{ font-family: Courier New !important; font-size: 0.85em;}
 /*  4. TEXT .ui-btn-text  
  * IMPROVE: vertical-align does not work, as ui-btn-inner needs display:block. Line-height is used to move text down - find a better way  
  */
-.apple-navbar-ui li a .ui-btn-text 							{ color: #999999; font-weight: bold; letter-spacing: 1px; display: block; font-size: 0.8em; height: 47px; left: 0; line-height: 77px; position: absolute; text-decoration: none !important; top: -1px; width: 100%;}
+.apple-navbar-ui li a .ui-btn-text 							{ color: #999999; font-weight: bold; letter-spacing: 1px; font-size: 0.8em; left: 0; text-decoration: none !important; display: block;	position: absolute; top: -1px;  width: 100%; padding-bottom: 2px; padding-top: 34px;}
 .apple-navbar-ui li:hover .ui-btn-text, .apple-navbar-ui .ui-btn-active .ui-btn-text
 															{ color: #fff; }
 
